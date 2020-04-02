@@ -1,12 +1,20 @@
 import UIKit
 
-// Type Inference
-let constant: Int = 10
-var variable: Int = 35
-var result: Int = constant + variable
+// Working with Text
 
-var name: String = "Samuel F. Ademola"
-var weight: Double = 170.5
-var OCA: Bool = false
+var first_name = "Samuel"
+var last_name = "Ademola"
+var full_name = first_name + last_name.uppercased()
+var age = 33
 
+var name_age = full_name + String(age)
 
+full_name.count
+
+// String Interpolation
+var firstName = "Samuel"
+var lastName = "Ademola"
+var fullName = "\(firstName) \(lastName)"
+var newAge = 32
+
+var intro = "Your name is \(fullName) and you are \(newAge) years old"
