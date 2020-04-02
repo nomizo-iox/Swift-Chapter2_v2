@@ -1,9 +1,12 @@
 import UIKit
 
-// Constants and Variables
-var str = "Hello, playground"
+// Type Inference
+let constant: Int = 10
+var variable: Int = 35
+var result: Int = constant + variable
 
-let constant = 10
-var y = 10
-var x = y + constant
+var name: String = "Samuel F. Ademola"
+var weight: Double = 170.5
+var OCA: Bool = false
+
 
