@@ -1,29 +1,26 @@
 import UIKit
 
-// Optionals
-//var message
-//var maxSpeed
+var emojiDict = ["🙄": "lame", "🤔": "Think", "😤": "Steamy", "😳": "Shocked" ]
+var wordToLookup = "😤"
+var meaning = emojiDict[wordToLookup]
 
-var jobTitle: String?
-print(type(of: jobTitle))
-
-jobTitle = "founder and CEO"
-
-//var message = "Your job title is " + jobTitle
-
-// Force Unwrapping through if statement
-if jobTitle != nil {
-    var newMessage = "You job title is " + jobTitle!
+if let meaningValue = meaning {
+    print(meaningValue)
 }
 
+let containerView = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+containerView.backgroundColor = UIColor.orange
 
-var firstName: String?
-var lastName: String?
 
-if firstName != nil {
-    var firstname = "Your first name is " + firstName!
-}
+let emojiLabel = UILabel(frame: CGRect(x: 95, y: 50, width: 150, height: 150))
+emojiLabel.text = wordToLookup
+emojiLabel.font = UIFont.systemFont(ofSize: 100.0)
 
-if let lastNameValue = lastName {
-    var message = "Your last name is " + lastNameValue
-}
+containerView.addSubview(emojiLabel)
+
+let meaningLabel = UILabel(frame: CGRect(x: 100, y: 150, width: 150, height: 150))
+meaningLabel.text = meaning
+meaningLabel.font = UIFont.systemFont(ofSize: 30.0)
+meaningLabel.textColor = UIColor.white
+
+containerView.addSubview(meaningLabel)
