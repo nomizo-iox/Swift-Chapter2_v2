@@ -1,56 +1,29 @@
 import UIKit
 
-// Collections - Arrays
-var book1 = "Tools of Titans"
-var book2 = "Rework"
-var book3 = "Your Move"
+// Optionals
+//var message
+//var maxSpeed
 
-var bookCollectionOne = [book1, book2, book3]
-var bookCollectionTwo = ["Tool of Titans", "Rework", "Your Move"]
-var bookCollectionThree = ["The Odyssey", "The Illiad", "Dracula"]
-var newBookCollection  = bookCollectionTwo + bookCollectionThree
-newBookCollection.sorted()
-print(newBookCollection.sorted())
-newBookCollection[2]
-print(newBookCollection)
-newBookCollection.append("Tom Sawyer")
-print(newBookCollection)
+var jobTitle: String?
+print(type(of: jobTitle))
 
-// Static for loop
-for books in 0...6{
-    print(newBookCollection[books])
-    print()
-}
+jobTitle = "founder and CEO"
 
-// Dynamic for loop
-for index in 0...newBookCollection.count - 1{
-    print(newBookCollection[index])
-    print()
-}
+//var message = "Your job title is " + jobTitle
 
-for book in newBookCollection {
-    print(book)
+// Force Unwrapping through if statement
+if jobTitle != nil {
+    var newMessage = "You job title is " + jobTitle!
 }
 
 
-// Collections Dictionary
-var bookCollectionDict = ["32": "Samuel", "29": "Abraham", "26": "David", "7": "Emmanuel"]
-bookCollectionDict["32"]
-for (key, value) in bookCollectionDict {
-    print("Age: \(key)")
-    print("Name: \(value)")
+var firstName: String?
+var lastName: String?
+
+if firstName != nil {
+    var firstname = "Your first name is " + firstName!
 }
 
-
-var emojiDict = ["👻": "Ghost", "💩": "Poop", "😤": "Steamy", "😱": "Scream", "👾": "Alien"]
-
-var wordToLookup = "👻"
-
-var meaning = emojiDict[wordToLookup]
-print(meaning)
-
-wordToLookup = "😤"
-meaning = emojiDict[wordToLookup]
-print(meaning)
-
-
+if let lastNameValue = lastName {
+    var message = "Your last name is " + lastNameValue
+}
