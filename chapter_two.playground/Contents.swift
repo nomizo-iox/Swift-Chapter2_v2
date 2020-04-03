@@ -1,50 +1,56 @@
 import UIKit
 
-// Control Flow
+// Collections - Arrays
+var book1 = "Tools of Titans"
+var book2 = "Rework"
+var book3 = "Your Move"
 
-/* If Else */
-var timeYouWakeUp = 6
+var bookCollectionOne = [book1, book2, book3]
+var bookCollectionTwo = ["Tool of Titans", "Rework", "Your Move"]
+var bookCollectionThree = ["The Odyssey", "The Illiad", "Dracula"]
+var newBookCollection  = bookCollectionTwo + bookCollectionThree
+newBookCollection.sorted()
+print(newBookCollection.sorted())
+newBookCollection[2]
+print(newBookCollection)
+newBookCollection.append("Tom Sawyer")
+print(newBookCollection)
 
-if timeYouWakeUp == 6 {
-    print("Cook yourself a big breakfast!")
-} else {
-    print("Go out for breakfast")
+// Static for loop
+for books in 0...6{
+    print(newBookCollection[books])
+    print()
+}
+
+// Dynamic for loop
+for index in 0...newBookCollection.count - 1{
+    print(newBookCollection[index])
+    print()
+}
+
+for book in newBookCollection {
+    print(book)
 }
 
 
-var bonus_one = 5000
-
-if bonus_one == 10000 {
-    print("You will travel to Paris & London")
-} else if bonus_one >= 5000 && bonus_one < 10000 {
-    print("You will travel to Tokyo")
-} else if bonus_one >= 1000 && bonus_one < 5000 {
-    print("You will to Bangkok")
-} else {
-    print("You will stay home.")
+// Collections Dictionary
+var bookCollectionDict = ["32": "Samuel", "29": "Abraham", "26": "David", "7": "Emmanuel"]
+bookCollectionDict["32"]
+for (key, value) in bookCollectionDict {
+    print("Age: \(key)")
+    print("Name: \(value)")
 }
 
 
+var emojiDict = ["👻": "Ghost", "💩": "Poop", "😤": "Steamy", "😱": "Scream", "👾": "Alien"]
 
-/* Switch Case */
-var timeYouSleep = 22
+var wordToLookup = "👻"
 
-switch timeYouSleep {
-case 6:
-    print("Say your night prayers")
-default:
-    print("Brush your teeth")
-}
+var meaning = emojiDict[wordToLookup]
+print(meaning)
 
-var bonus_two = 7000
+wordToLookup = "😤"
+meaning = emojiDict[wordToLookup]
+print(meaning)
 
-switch bonus_two {
-case 10000...:
-    print("You will travel to Paris & London")
-case 5000...9999:
-    print("You will travel to Tokyo")
-case 1000...4999:
-    print("You will travel to Bangok")
-default:
-    print("You will stay home")
-}
+
